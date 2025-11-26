@@ -85,10 +85,18 @@
       outline: 2px solid var(--accent);
       outline-offset: -2px;
     }
+    .cv-nav { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:18px; }
+    .btn { background: transparent; border: 1px solid rgba(15,98,254,0.12); color: var(--accent); padding:8px 12px; border-radius:8px; text-decoration:none; font-weight:600; display:inline-block; }
+    .btn:hover { background: rgba(15,98,254,0.06); }
+    .btn:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
   </style>
 </head>
 <body>
   <div class="page">
+    <nav class="cv-nav" aria-label="Navigation">
+      <a class="btn" href="README.md" title="Back to main">← Back to main</a>
+      <a class="btn" href="random.md" title="Next page">Next page →</a>
+    </nav>
     <div class="container">
       <div class="column" tabindex="0" autofocus>
         <h3>How COVID-19 changed sustainable development growth strategies for companies internationally. Case study of Volkswagen AG.</h3>
