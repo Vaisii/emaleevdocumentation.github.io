@@ -6,28 +6,39 @@
 <title>Viacheslav Emaleev — CV</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--accent:#0f62fe;--bg:#f7f9fc;--card:#ffffff}
-  *{box-sizing:border-box}
-  body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#102a43;margin:0;padding:32px}
-  .page{max-width:960px;margin:0 auto}
-  header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
-  .avatar{width:84px;height:84px;border-radius:8px;background:linear-gradient(45deg,rgba(15,98,254,.15),rgba(15,98,254,.06));display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
-  h1{margin:0;font-size:1.6rem}
-  p.lead{margin:0;color:#3c4858}
-  .controls{margin-left:auto}
-  button.print{background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
-  .layout{display:grid;grid-template-columns:300px 1fr;gap:20px}
-  .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 4px 14px rgba(20,30,40,.04)}
-  h2{margin-top:0;margin-bottom:8px;font-size:1rem;color:#102a43}
-  .muted{color:#486581;font-size:.95rem}
-  ul{margin:0;padding-left:18px}
-  .section{margin-bottom:16px}
-  .experience .job{margin-bottom:12px}
-  .job h3{margin:0;font-size:1rem}
-  .meta{font-size:.9rem;color:#486581;margin-bottom:6px}
-  @media (max-width:800px){.layout{grid-template-columns:1fr} .controls{margin:12px 0 0}}
-  @media print{body{background:#fff} .controls, .avatar{display:none} .page{padding:0}}
-</style>
+    :root{--accent:#0f62fe;--bg:#f7f9fc;--card:#ffffff}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#102a43;margin:0;padding:32px}
+    .page{max-width:960px;margin:0 auto}
+    header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+    .avatar{width:84px;height:84px;border-radius:8px;background:linear-gradient(45deg,rgba(15,98,254,.15),rgba(15,98,254,.06));display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{margin:0;color:#3c4858}
+    .controls{margin-left:auto}
+    button.print{background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+    .layout{display:grid;grid-template-columns:300px 1fr;gap:20px}
+    .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 4px 14px rgba(20,30,40,.04)}
+    h2{margin-top:0;margin-bottom:8px;font-size:1rem;color:#102a43}
+    .muted{color:#486581;font-size:.95rem}
+    ul{margin:0;padding-left:18px}
+    .section{margin-bottom:16px}
+    .experience .job{margin-bottom:12px}
+    .job h3{margin:0;font-size:1rem}
+    .meta{font-size:.9rem;color:#486581;margin-bottom:6px}
+    /* Collapsible CV details */
+    .details-cv { margin-top: 12px; }
+    .summary-cv { cursor: pointer; padding: 10px 14px; border-radius: 8px; display: inline-block; background: rgb(246, 248, 255); border: 1px solid transparent; color: var(--accent); font-weight: 600; }
+    .summary-cv:hover { background: rgba(15,98,254,0.05); }
+    .details-cv[open] .summary-cv { background: var(--accent); color: #fff; border-color: rgba(15,98,254,0.16); }
+    .details-cv .cv-sections { margin-top: 12px; }
+    details>summary::-webkit-details-marker { display:none; }
+    @media print {
+      details { display:block !important; }
+      .summary-cv { display:none !important; }
+    }
+    @media (max-width:800px){.layout{grid-template-columns:1fr} .controls{margin:12px 0 0}}
+    @media print{body{background:#fff} .controls, .avatar{display:none} .page{padding:0}}
+  </style>
 </head>
 <body>
 <div class="page">
@@ -36,15 +47,16 @@
     <div>
       <h1>Viacheslav Emaleev</h1>
       <p class="lead">Technical writer — This is my technical writer portfolio</p>
-      <div class="muted">Location — City, Country • Email — your.email@example.com</div>
+      <div class="muted">Location — Ekaterinburg, Russia </div>
+      <div class="muted">Email — emaleev99@mail.com</div>
     </div>
 
-    <div class="controls">
+    <!-- <div class="controls">
       <button class="print" onclick="window.print()">Download / Print PDF</button>
-    </div>
+    </div> -->
   </header>
 
-  <div class="layout">
+  <!-- <div class="layout">
     <aside class="card">
       <div class="section">
         <h2>Contact</h2>
@@ -56,14 +68,14 @@
           <li>LinkedIn: https://linkedin.com/in/yourprofile</li>
           <li>GitHub: https://github.com/yourusername</li>
         </ul>
-      </div>
+      </div> -->
 
       <div class="section">
         <h2>Skills</h2>
         <ul>
-          <li>Technical: Python, JavaScript, SQL, Docker</li>
-          <li>Tools: VS Code, Git, AWS</li>
-          <li>Soft: Communication, Leadership, Problem-solving</li>
+          <li>Technical: Python, 1С:Enterprice, HTML, CSS</li>
+          <li>Tools: VS Code, Git, 1С:Enterprice EDT, Configurator, PostgreSQL</li>
+          <!-- <li>Soft: Communication, Leadership, Problem-solving</li> -->
         </ul>
       </div>
 
@@ -74,71 +86,93 @@
 
       <div class="section">
         <h2>Interests</h2>
-        <p class="muted">Hobbies or interests relevant to your profile</p>
+        <p class="muted">English, German and Russian literature. Art history. Programming.</p>
       </div>
     </aside>
 
     <main>
+      <details class="details-cv" id="cv-details">
+        <summary class="summary-cv">Show CV details</summary>
+        <div class="cv-sections">
       <section class="card section">
-        <h2>Summary</h2>
-        <p class="muted">A short professional summary (2–4 sentences) describing your experience, specializations, and career goals.</p>
-      </section>
+         <h2>Summary</h2>
+         <p class="muted">A short professional summary (2–4 sentences) describing your experience, specializations, and career goals.</p>
+       </section>
+ 
+       <section class="card section experience">
+         <h2>Experience</h2>
+ 
+         <div class="job">
+           <h3>[Job Title] — [Company Name]</h3>
+           <div class="meta">[Start Date] — [End Date or Present] • City, Country</div>
+           <ul>
+             <li>[Achievement or responsibility 1]</li>
+             <li>[Achievement or responsibility 2]</li>
+             <li>[Achievement or responsibility 3]</li>
+           </ul>
+         </div>
+ 
+         <div class="job">
+           <h3>[Job Title] — [Company Name]</h3>
+           <div class="meta">[Start Date] — [End Date] • City, Country</div>
+           <ul>
+             <li>[Achievement or responsibility 1]</li>
+             <li>[Achievement or responsibility 2]</li>
+           </ul>
+         </div>
+       </section>
+ 
+       <section class="card section">
+         <h2>Education</h2>
+         <div class="muted">
+           <strong>[Degree] — [School Name]</strong><br>
+           [Start Year] — [Graduation Year]
+         </div>
+         <p class="muted">Relevant coursework / honors: Optional</p>
+       </section>
+ 
+       <!-- <section class="card section">
+         <h2>Projects</h2>
+         <div class="muted">
+           <strong>[Project Title]</strong> — [Tag or link]<br>
+           <small>Tech: [Technologies used] • Role: [Your role]</small>
+           <p>Description: One-sentence summary of the project.</p>
+         </div>
+       </section> -->
+ 
+       <section class="card section">
+         <h2>Certifications</h2>
+         <ul>
+           <li>[Certification Name — Issuer, Year]</li>
+           <li>[Certification Name — Issuer, Year]</li>
+         </ul>
+       </section>
+ 
+       <section class="card section">
+         <h2>References</h2>
+         <p class="muted">Available upon request</p>
+       </section>
+       </div>
+       </details>
 
-      <section class="card section experience">
-        <h2>Experience</h2>
+       <details class="details-cv" id="cv-details" open>
+          <summary class="summary-cv">Show Text</summary>
+          
+          <div class="cv-sections">
+            <section class="card section">
+              <h2>Managerial topics</h2>
+              <a href="managerial.md" >Texts that I have written in English on the topics of management and corporate governance</a>
+              <!-- <p class="muted">Texts that I have written in English on the topics of management and corporate governance</p> -->
+            </section>
 
-        <div class="job">
-          <h3>[Job Title] — [Company Name]</h3>
-          <div class="meta">[Start Date] — [End Date or Present] • City, Country</div>
-          <ul>
-            <li>[Achievement or responsibility 1]</li>
-            <li>[Achievement or responsibility 2]</li>
-            <li>[Achievement or responsibility 3]</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <h3>[Job Title] — [Company Name]</h3>
-          <div class="meta">[Start Date] — [End Date] • City, Country</div>
-          <ul>
-            <li>[Achievement or responsibility 1]</li>
-            <li>[Achievement or responsibility 2]</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="card section">
-        <h2>Education</h2>
-        <div class="muted">
-          <strong>[Degree] — [School Name]</strong><br>
-          [Start Year] — [Graduation Year]
-        </div>
-        <p class="muted">Relevant coursework / honors: Optional</p>
-      </section>
-
-      <section class="card section">
-        <h2>Projects</h2>
-        <div class="muted">
-          <strong>[Project Title]</strong> — [Tag or link]<br>
-          <small>Tech: [Technologies used] • Role: [Your role]</small>
-          <p>Description: One-sentence summary of the project.</p>
-        </div>
-      </section>
-
-      <section class="card section">
-        <h2>Certifications</h2>
-        <ul>
-          <li>[Certification Name — Issuer, Year]</li>
-          <li>[Certification Name — Issuer, Year]</li>
-        </ul>
-      </section>
-
-      <section class="card section">
-        <h2>References</h2>
-        <p class="muted">Available upon request</p>
-      </section>
-    </main>
-  </div>
-</div>
-</body>
-</html>
+            <div class="cv-sections">
+            <section class="card section">
+              <h2>Random topics</h2>
+              <a href="random.md" >English texts on random topics</a>
+            </section>
+      </details>
+     </main>
+   </div>
+ </div>
+ </body>
+ </html>

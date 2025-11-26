@@ -27,7 +27,7 @@
     .meta{font-size:.9rem;color:#486581;margin-bottom:6px}
     /* Collapsible CV details */
     .details-cv { margin-top: 12px; }
-    .summary-cv { cursor: pointer; padding: 10px 14px; border-radius: 8px; display: inline-block; background: transparent; border: 1px solid transparent; color: var(--accent); font-weight: 600; }
+    .summary-cv { cursor: pointer; padding: 10px 14px; border-radius: 8px; display: inline-block; background: rgb(246, 248, 255); border: 1px solid transparent; color: var(--accent); font-weight: 600; }
     .summary-cv:hover { background: rgba(15,98,254,0.05); }
     .details-cv[open] .summary-cv { background: var(--accent); color: #fff; border-color: rgba(15,98,254,0.16); }
     .details-cv .cv-sections { margin-top: 12px; }
@@ -155,19 +155,20 @@
        </div>
        </details>
 
-       <details class="details-cv" id="cv-details">
+       <details class="details-cv" id="cv-details" open>
           <summary class="summary-cv">Show Text</summary>
           
           <div class="cv-sections">
             <section class="card section">
               <h2>Managerial topics</h2>
-              <p class="muted">Texts that I have written in English on the topics of management and corporate governance</p>
+              <a href="managerial.md" >Texts that I have written in English on the topics of management and corporate governance</a>
+              <!-- <p class="muted">Texts that I have written in English on the topics of management and corporate governance</p> -->
             </section>
 
             <div class="cv-sections">
             <section class="card section">
               <h2>Random topics</h2>
-              <p class="muted">English texts on random topics</p>
+              <a href="random.md" >English texts on random topics</a>
             </section>
       </details>
      </main>
